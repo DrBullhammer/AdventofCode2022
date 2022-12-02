@@ -21,14 +21,19 @@ for item in data:
         max_cals = count
 #added for part 2
     if count > elf1:
-            elf1 = count
-    elif count > elf2:
-            elf2 = count
+        elf3 = elf2
+        elf2 = elf1
+        elf1 = count
+    elif elf1 > count > elf2:
+        elf3 = elf2
+        elf2 = count
     elif count > elf3:
-            elf3 = count
+        elf3 = count
 
 print("The most calories being carried is: ", max_cals)
 
 top_3_elves = elf1 + elf2 + elf3
-
+print("Elf 1: ", elf1)
+print("Elf 2: ", elf2)
+print("Elf 3: ", elf3)
 print("The calories carried by the top 3 elves is:  ", top_3_elves)
