@@ -4,10 +4,6 @@ with open('day4.in') as file:
 
 full_range_pair = 0
 overlap = 0
-pair_one_low = 0
-pair_one_high = 0
-pair_two_low = 0
-pair_two_high = 0
 length = len(pairs)
 count = 0
 
