@@ -43,23 +43,14 @@ while count < length:
         pair_two_high = int(pair_two[2:])
     
 #comparisons
-    if pair_one_low <= pair_two_low and pair_one_high >= pair_two_high:
+    if (pair_one_low <= pair_two_low and pair_one_high >= pair_two_high) or (pair_two_low <= pair_one_low and pair_two_high >= pair_one_high):
         full_range_pair +=1
         overlap += 1
-    elif pair_two_low <= pair_one_low and pair_two_high >= pair_one_high:
-        full_range_pair +=1
-        overlap +=1
-    elif pair_one_low == pair_two_low:
+    
+    elif pair_one_low == pair_two_low or pair_one_high == pair_two_low or pair_one_high == pair_two_high or pair_one_low == pair_two_high:
         overlap += 1
-    elif pair_one_high == pair_two_low:
-        overlap += 1
-    elif pair_one_high == pair_two_high:
-        overlap += 1
-    elif pair_one_low == pair_two_high:
-        overlap += 1
-    elif pair_one_low < pair_two_low and pair_one_high > pair_two_low:
-        overlap += 1
-    elif pair_one_low > pair_two_low and pair_one_low < pair_two_high:
+    
+    elif pair_one_low < pair_two_low and pair_one_high > pair_two_low or pair_one_low > pair_two_low and pair_one_low < pair_two_high:
         overlap += 1
 
     count += 1
