@@ -11,7 +11,7 @@ pair_two_high = 0
 length = len(pairs)
 count = 0
 
-#split each line into a pair of strings
+#split each line and cast to int for comparison
 while count < length:
     pair_split = pairs[count].replace('-', ',').split(',')
     pair_one_low = int(pair_split[0])
